@@ -50,6 +50,7 @@ def write_section(plot, chapter_title, section_num, previous_content):
     time.sleep(20)  # Esto solo para usuarios prueba, si eres usuario paga, puedes reducir el tiempo.
     return response['choices'][0]['message']['content']
 
+# Funcion para generar el papel técnico
 def write_technical_paper():
     for chapter_info in chapter_data:
         chapter_title = chapter_info['title']
