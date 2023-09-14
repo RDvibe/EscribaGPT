@@ -6,13 +6,13 @@ from pathlib import Path
 # En este caso usamos un archivo.txt para guardar nuestros textos
 
 # configura la clave API de OpenAI
-openai.api_key = ""
+openai.api_key = ""  # Reemplazar con tu API key
 
 folder_path = "C:\\Users\\Ricardo Ruiz\\Documents\\textos_de_RD-bot"
 if not os.path.exists(folder_path):
     os.makedirs(folder_path)
 
-
+# Generar plots
 def generate_plots(prompt, chapter_title):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k",
@@ -30,7 +30,7 @@ def generate_plots(prompt, chapter_title):
         f.write("\n".join(plots))
         f.write("\n")
     return plots
-
+# Generar capítulos
 chapter_data = [
     {"title": "El Horror Cósmico en la Era Digital", "prompt": "el horror cósmico"},
     {"title": "El Despertar de las Máquinas", "prompt": "la revuelta de las máquinas"},
@@ -38,6 +38,7 @@ chapter_data = [
     {"title": "Distopía y Caos Cibernético", "prompt": "la distopía cibernética"},
 ]
 
+# Generar sección
 def write_section(plot, chapter_title, section_num, previous_content):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k",
@@ -67,3 +68,6 @@ def write_technical_paper():
             f.write(full_chapter_content)
 
 write_technical_paper()
+
+# Imprimir mensaje de que todo se genero con éxito
+print(f'Textos generados con éxito y guardados en la ruta {folder_path}.')
