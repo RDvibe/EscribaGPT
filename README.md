@@ -8,7 +8,6 @@ Este es un proyecto en constante evolución que busca explorar las capacidades d
 
 - Generación de textos en múltiples temáticas y estilos.
 - Capacidad para guardar los textos generados en formato `.docx` y `.txt`.
-- Interfaz de usuario sencilla y accesible.
 - Utiliza variables de entorno para mayor seguridad en la gestión de claves API.
 
 ## Futuras Actualizaciones
