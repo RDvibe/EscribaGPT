@@ -1,4 +1,4 @@
-# EscribaGPT
+# GPTEscriba
 
 ## Descripción
 
