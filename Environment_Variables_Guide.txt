@@ -1,0 +1,33 @@
+
+# Guía para Configurar y Ver Variables de Entorno en Windows
+
+## Configurar una Variable de Entorno
+
+1. Abre el Símbolo del sistema (CMD) como administrador.
+2. Utiliza el comando `setx` para establecer una variable de entorno. Por ejemplo:
+    ```
+    setx OPENAI_API_KEY_CHATGPT "tu_clave_aquí"
+    ```
+3. Verás un mensaje como "CORRECTO: se guardó el valor especificado" si todo sale bien.
+
+## Ver las Variables de Entorno
+
+### Método 1: Usar CMD
+
+1. Abre el Símbolo del sistema (CMD).
+2. Utiliza el comando `echo` seguido del nombre de la variable de entorno entre signos de porcentaje. Por ejemplo:
+    ```
+    echo %OPENAI_API_KEY_CHATGPT%
+    ```
+
+### Método 2: Usar el Panel de Control
+
+1. Presiona `Win + R` para abrir el cuadro de diálogo "Ejecutar".
+2. Escribe `SystemPropertiesAdvanced` y pulsa `Enter`.
+3. En la ventana "Propiedades del sistema", haz clic en "Variables de entorno".
+4. Verás dos secciones: "Variables de usuario para [tu nombre de usuario]" y "Variables del sistema".
+5. Busca tu variable en la sección correspondiente.
+
+---
+
+Espero que esta guía te sea de utilidad en tu travesía cósmica por el laberinto del código y las variables.
