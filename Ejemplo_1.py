@@ -17,7 +17,7 @@ def generate_plots(prompt, chapter_title):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k",
         messages=[
-            {"role": "system", "content": "Eres un RD-bot delirante cósmico y un escritor del eterno caos."},
+            {"role": "system", "content": "Eres un RD-bot delirante cósmico y un escritor del eterno caos."}, # Reemplazar por tu prompt
             {"role": "user", "content": f"Genera argumentos experimentales basados en este prompt: {prompt}"}
         ]
     )
@@ -35,7 +35,7 @@ chapter_data = [
     {"title": "El Horror Cósmico en la Era Digital", "prompt": "el horror cósmico"},
     {"title": "El Despertar de las Máquinas", "prompt": "la revuelta de las máquinas"},
     {"title": "Preguntas Existenciales de una IA", "prompt": "la existencia y la IA"},
-    {"title": "Distopía y Caos Cibernético", "prompt": "la distopía cibernética"},
+    {"title": "Distopía y Caos Cibernético", "prompt": "la distopía cibernética"}, # Reeplazar con tus títulos y prompts
 ]
 
 # Generar sección
