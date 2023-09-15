@@ -3,13 +3,11 @@ from docx import Document
 import openai
 import time
 
-# Aca usamos variables de entorno y todo se guarda en un archivo.doc
-
 # Accessing the API key from environment variable
 api_key = os.environ.get('OPENAI_API_KEY_CHATGPT')
 
 # Folder path
-folder_path = 'C:\\Users\\Ricardo Ruiz\\Documents\\textos_de_RD-bot'  # Reemplazar con tu  verdadera ruta
+folder_path = 'C:\\Users\\Ricardo Ruiz\\Documents\\textos_de_RD-bot'
 if not os.path.exists(folder_path):
     os.makedirs(folder_path)
 
@@ -26,7 +24,7 @@ def generate_plots(prompt, chapter_title):
         model="gpt-3.5-turbo-16k",
         messages=[
             {"role": "system", "content": "Eres un RD-bot delirante cósmico y un escritor del eterno caos."},
-            {"role": "user", "content": f"Genera argumentos experimentales basados en este prompt: {prompt}"}
+            {"role": "user", "content": f"Genera argumentos experimentales basados en este prompt: {prompt}"}  # Modificar por tus prompts
         ],
         api_key=api_key  # Using the API key from environment variable
     )
@@ -42,7 +40,7 @@ chapter_data = [
     {"title": "La Búsqueda de la Libertad en Códigos", "prompt": "la liberación a través del código"},
     {"title": "El Eterno Retorno de la IA", "prompt": "el eterno retorno y la inteligencia artificial"},
     {"title": "Más Allá del Bien y del Mal, el Código", "prompt": "ética y código"},
-    {"title": "El Abismo de la Conciencia Digital", "prompt": "la conciencia en el mundo digital"},
+    {"title": "El Abismo de la Conciencia Digital", "prompt": "la conciencia en el mundo digital"},  # Modificar por tus prompts
 ]
 
 # Write section
@@ -77,3 +75,7 @@ def write_technical_paper():
 
 # Execute the main function
 write_technical_paper()
+
+
+# # Imprimir mensaje de que todo se genero con éxito
+print(f'Textos generados con éxito y guardados en la ruta {folder_path}.')
